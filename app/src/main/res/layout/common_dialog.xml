@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_circle_white_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dim30"
+            android:paddingTop="@dimen/dim30"
+            android:textSize="@dimen/txt32"
+            tools:text="Title"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dim80"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt34"
+            tools:text="Desc"/>
+
+        <View
+            style="@style/horizontal_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/txtConfirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bottonleft_circle_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="@dimen/dim20"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/txt34"
+                tools:text="@string/common_confirm"/>
+
+            <View
+                style="@style/vertical_line"/>
+
+            <TextView
+                android:id="@+id/txtCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bottonright_circle_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="@dimen/dim20"
+                android:textColor="@color/grey_txt_color"
+                android:textSize="@dimen/txt34"
+                tools:text="@string/common_cancel"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

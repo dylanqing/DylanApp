@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.worldunion.dylanapp"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <!-- 读取联系人 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!-- 百度地图所需权限 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!--分享所需权限-->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD"/>
+
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".unit.main.MainActivity"/>
+
+        <!--其他-->
+        <activity
+            android:name=".unit.splash.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".unit.msg.MsgActivity">
+        </activity>
+
+        <activity android:name=".unit.blur.BlurActivity">
+            <!--要想在别的App上能成功调起App，必须添加intent过滤器-->
+            <intent-filter>
+                <!--协议部分，随便设置-->
+                <!--xl://goods:8888/goodsDetail?goodsId=10011002-->
+                <data
+                    android:host="goods"
+                    android:path="/goodsDetail"
+                    android:port="8888"
+                    android:scheme="xl"/>
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".unit.pulltorefresh.PtrActivity"
+                  android:screenOrientation="portrait" />
+
+        <activity android:name=".unit.changehead.ChangeHeadActivity"
+                  android:screenOrientation="portrait" />
+
+        <activity android:name=".unit.contact.LoadContactActivity"
+                  android:screenOrientation="portrait" />
+
+        <activity android:name=".unit.clearedittext.EditInputActivity"
+                  android:screenOrientation="portrait" />
+
+        <activity android:name=".unit.flexlistview.FlexListViewActivity"
+                  android:screenOrientation="portrait" />
+
+        <activity android:name=".unit.test.TouchActivity"
+                  android:screenOrientation="portrait" />
+
+        <activity android:name=".unit.contact.ContactActivity"
+                  android:screenOrientation="portrait" />
+
+        <activity android:name=".unit.imageloader.ImageLoaderActivity"
+                  android:screenOrientation="portrait" />
+
+        <service android:name="com.worldunion.dylanapp.unit.heartbeat.TestService">
+            <intent-filter>
+                <action android:name="com.formax.heartbeatIntent" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".unit.heartbeat.TestServiceActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".unit.volley.VolleyActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".unit.okhttp.OkHttpActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".unit.qrscan.QRScanActivity"
+                  android:launchMode="singleTop"
+                  android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

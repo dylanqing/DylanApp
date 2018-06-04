@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <!--通用-->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black2">#AF000000</color>
+    <color name="laoding_black">#B2000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!--集客3.0使用color-->
+
+    <!--主色调-->
+    <color name="main_color">#4ec2cd</color>
+    <color name="main_color_half">#8f4ec2cd</color>
+    <!--突出文字-->
+    <color name="main_highlight_color">#f3242d</color>
+    <!--次要文字-->
+    <color name="grey_txt_color">#939393</color>
+    <!--分割线，输入框提示文字-->
+    <color name="grey_line_color">#c8c8c8</color>
+    <!--间隔条-->
+    <color name="grey_interval_color">#f8f8f8</color>
+    <color name="grey_interval_color2">#e6e6e6</color>
+    <color name="grey_interval_color3">#f2f2f2</color>
+
+    <!--单一按钮按下时-->
+    <color name="btn_click_color">#2ca1ac</color>
+    <!--双向操作按钮按钮按下时-->
+    <color name="btn2_click_color">#b0ebf1</color>
+    <!--灰色置底按钮按下时-->
+    <color name="btn2_rect_click_color">#e4e2e2</color>
+    <!--对话框字体颜色_按钮-->
+    <color name="dialog_left_txt_color">#0865d5</color>
+    <color name="dialog_right_txt_color">@color/grey_txt_color</color>
+    <!--banner圆点 60%透明白色-->
+    <color name="banner_point_color">#99FFFFFF</color>
+    <!--间隙背景颜色-->
+    <color name="gap_bg_color">#E6E6E6</color>
+    <!--注册界面倒数背景-->
+    <color name="regist_count_bg_color">#D2D2D2</color>
+    <!--banner文字 40%透明黑-->
+    <color name="banner_txt_color">#66000000</color>
+    <!--图片标签文字背景色-->
+    <color name="tips_txt_color">#7f000000</color>
+    <!--75%透黑背景-->
+    <color name="act_bg_black">#BF000000</color>
+    <!--标签文字色-->
+    <color name="label_txt_color">#39abdf</color>
+    <!--标签背景描边色-->
+    <color name="label_stroke_color">#54bae9</color>
+    <!--标签背景色-->
+    <color name="label_bg_color">#e6fbff</color>
+    <!--筛选页未选中背景-->
+    <color name="filter_bg_unselect">#eef1f3</color>
+    <!--筛选页选中背景-->
+    <color name="filter_bg_select">#effdfe</color>
+    <!-- 我的模块默认色 -->
+    <color name="my_txt_color">#47c2ce</color>
+    <!--客户详情背景-->
+    <color name="customer_detail_bg">@color/grey_interval_color3</color>
+    <!--客户详情签约状态背景-->
+    <color name="customer_detail_status_line">#59bbe7</color>
+    <color name="customer_detail_status_bg">#e9fcfe</color>
+    <color name="customer_detail_status_txt">#40acdd</color>
+    <color name="customer_detail_status_circle">@color/my_txt_color</color>
+    <color name="customer_detail_status_circle_bg">#b7ecf1</color>
+    <color name="customer_intent_circle_true">#2ab2de</color>
+
+    <color name="detail_color_tips1">#40acdd</color>
+    <color name="detail_color_tips2">#f08c43</color>
+    <color name="detail_color_tips3">#6bca5e</color>
+    <color name="detail_color_tips4">#9c61cf</color>
+
+
+    <!--新版本添加，最基本的color-->
+    <color name="base_line_bg">#c8c8c8</color>
+    <color name="base_white">#FFFFFF</color>
+    <color name="base_black">#000000</color>
+    <color name="base_red">#ff0000</color>
+    <color name="base_green">#00ff00</color>
+    <color name="base_blue">#0000ff</color>
+    <color name="base_transparent">#00000000</color>
+
+    <color name="base_333333">#333333</color>
+
+
+    
+</resources>

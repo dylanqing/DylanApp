@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:titleView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.worldunion.dylanapp.widget.title.TitleView
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        titleView:centerDesc="@string/my_editinput"
+        titleView:leftImage="@drawable/icon_back"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim98"
+        android:layout_marginLeft="@dimen/dim20"
+        android:layout_marginRight="@dimen/dim20"
+        android:layout_marginTop="@dimen/dim40"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt28px"
+            android:layout_width="wrap_content"
+            android:text="密码"/>
+
+        <EditText
+            android:id="@+id/etPwd"
+            style="@style/commonEditStyle"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/dim20"
+            android:layout_weight="1"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:maxLength="20"/>
+
+        <ImageView
+            android:id="@+id/ivPwdVisible"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dim20"
+            android:src="@drawable/regist_pwd_invisible"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim90"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dim40"
+        android:gravity="center">
+
+        <com.worldunion.dylanapp.widget.ClearEditText
+            android:id="@+id/et_usernum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dim55"
+            android:layout_marginRight="@dimen/dim55"
+            android:background="@color/transparent"
+            android:drawablePadding="@dimen/dim20"
+            android:hint="请输入密码"
+            android:inputType="number"
+            android:textColor="@color/grey_line_color"
+            android:textColorHint="@color/grey_line_color"
+            android:textSize="@dimen/txt28"/>
+
+    </LinearLayout>
+</LinearLayout>

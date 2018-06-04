@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 数据库建表Bean Class -->
+    <string-array name="db_table">
+        <item>com.berchina.agency.bean.CityAddress</item>
+        <item>com.berchina.agency.bean.FlexValue</item>
+        <item>com.berchina.agency.bean.customer.CustomerListBean</item>
+    </string-array>
+
+</resources>

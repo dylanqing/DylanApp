@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_circle_white_bg"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/txt34px"
+        android:layout_width="match_parent"
+        android:padding="@dimen/dim20"
+        android:text="我的生日"
+        />
+
+    <View
+        style="@style/horizontal_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.worldunion.dylanapp.widget.WheelView
+            android:id="@+id/wvYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            />
+
+        <TextView
+            style="@style/txt28px"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="年"/>
+
+        <com.worldunion.dylanapp.widget.WheelView
+            android:id="@+id/wvMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            />
+
+        <TextView
+            style="@style/txt28px"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="月"/>
+
+        <com.worldunion.dylanapp.widget.WheelView
+            android:id="@+id/wvDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            />
+
+        <TextView
+            style="@style/txt28px"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="日"/>
+
+
+    </LinearLayout>
+
+
+    <View
+        style="@style/horizontal_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            style="@style/txt28px"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bottonleft_circle_bg"
+            android:padding="@dimen/dim30"
+            android:text="@string/common_cancel"
+            />
+
+        <View
+            style="@style/vertical_line"
+            android:layout_marginBottom="@dimen/dim10"
+            android:layout_marginTop="@dimen/dim10"/>
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            style="@style/txt28px"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bottonright_circle_bg"
+            android:padding="@dimen/dim30"
+            android:text="@string/common_confirm"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

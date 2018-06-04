@@ -1,0 +1,54 @@
+<resources>
+
+    <!--style基类，引用的时候如果有不同的可以以这个类为基类继承，这个基类尽量不要进行改动，基类中添加的都加上base-->
+
+    <!--分割线_水平-->
+    <style name="base_horizontal_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dim1</item>
+        <item name="android:background">@color/base_line_bg</item>
+    </style>
+
+    <!--分割线_垂直-->
+    <style name="base_vertical_line">
+        <item name="android:layout_width">@dimen/dim1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/base_line_bg</item>
+    </style>
+
+    <!--txt_style的基类，大小和颜色由子类自己去重写-->
+    <style name="base_txt_parent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/base_black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--34txt文字-->
+    <style name="base_txt34px" parent="base_txt_parent">
+        <item name="android:textSize">@dimen/txt34</item>
+    </style>
+
+
+    <!--28txt文字-->
+    <style name="base_txt28px" parent="base_txt_parent">
+        <item name="android:textSize">@dimen/txt28</item>
+    </style>
+
+    <!--26txt文字-->
+    <style name="base_txt26px" parent="base_txt_parent">
+        <item name="android:textSize">@dimen/txt26</item>
+    </style>
+
+    <!--24txt文字-->
+    <style name="base_txt24px" parent="base_txt_parent">
+        <item name="android:textSize">@dimen/txt24</item>
+    </style>
+
+    <!--22txt文字-->
+    <style name="base_txt22px" parent="base_txt_parent">
+        <item name="android:textSize">@dimen/txt22</item>
+    </style>
+
+
+</resources>

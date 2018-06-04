@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">BaseLib</string>
+
+
+    <!--**********************************************通用**********************************************-->
+
+    <string name="common_cancel">取消</string>
+    <string name="common_confirm">确定</string>
+    <string name="common_clear">清空</string>
+    <string name="common_finish">完成</string>
+    <string name="common_positive">确认</string>
+    <string name="common_know">我知道了</string>
+    <string name="common_exit">退出</string>
+    <string name="common_next_step">下一步</string>
+    <string name="common_last_step">上一步</string>
+    <string name="common_reset">重置</string>
+    <string name="common_commit">提交</string>
+    <string name="common_save">保存</string>
+    <string name="common_save_success">保存成功</string>
+    <string name="common_save_failed">保存失败</string>
+    <string name="common_false">否</string>
+    <string name="common_true">是</string>
+
+
+</resources>

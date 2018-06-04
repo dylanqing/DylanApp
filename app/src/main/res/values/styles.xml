@@ -1,0 +1,130 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@android:style/Theme.Light.NoTitleBar"/>
+
+    <!-- 欢迎页主题 splash秒开 -->
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/icon_app_splash</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- <item name="android:windowIsTranslucent">true</item> --> <!-- 透明背景 -->
+    </style>
+
+
+    <!-- statusbar需要这个主题. -->
+    <style name="AppTransTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/main_color</item>
+        <item name="colorPrimaryDark">@color/main_color</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!--分割线_水平-->
+    <style name="horizontal_line" parent="base_horizontal_line">
+        <item name="android:background">@color/grey_line_color</item>
+    </style>
+
+    <!--分割线_垂直-->
+    <style name="vertical_line" parent="base_vertical_line">
+        <item name="android:background">@color/grey_line_color</item>
+    </style>
+
+    <!--内容块间隔分隔_水平-->
+    <style name="horizontal_line2" parent="base_vertical_line">
+        <item name="android:background">@color/grey_interval_color</item>
+    </style>
+
+    <!--内容块间隔分隔_水平-->
+    <style name="horizontal_line3" parent="base_horizontal_line">
+        <item name="android:background">@color/grey_interval_color2</item>
+    </style>
+
+    <!--内容块间隔分隔_垂直-->
+    <style name="vertical_line2" parent="base_vertical_line">
+        <item name="android:background">@color/grey_interval_color</item>
+    </style>
+
+    <style name="txt34px" parent="base_txt34px">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="txt28px" parent="base_txt28px">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="txt26px" parent="base_txt26px">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="txt24px" parent="base_txt24px">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--标签里的文字-->
+    <style name="txt22px" parent="base_txt22px">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <!-- LoadingLayout -->
+    <declare-styleable name="LoadingLayout">
+        <attr name="loadingView" format="reference" />
+        <attr name="errorView" format="reference" />
+        <attr name="retryView" format="reference" />
+        <attr name="emptyView" format="reference" />
+        <attr name="emptyImg" format="reference" />
+        <attr name="emptyTxt" format="string" />
+    </declare-styleable>
+
+    <!-- http的loading Dialog -->
+    <style name="http_progress" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--通用对话框样式-->
+    <style name="CommonDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <!--edittext样式1，如注册页面中输入框-->
+    <style name="commonEditStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColorHint">@color/grey_line_color</item>
+        <item name="android:textSize">@dimen/txt28</item>
+    </style>
+
+    <!--对话框划入划出动画-->
+    <style name="dialog_anim" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="@android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+    <!--对话框位移动画-->
+    <style name="filter_dialog_anim" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/translate_in</item>
+        <item name="@android:windowExitAnimation">@anim/translate_out</item>
+    </style>
+
+
+
+
+</resources>

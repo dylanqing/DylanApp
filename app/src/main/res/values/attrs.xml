@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- TitleBar -->
+    <declare-styleable name="TitleView">
+        <attr name="leftDesc" format="string" />
+        <attr name="rightDesc" format="string" />
+        <attr name="centerDesc" format="string" />
+        <attr name="leftImage" format="reference|color" />
+        <attr name="centerImage" format="reference|color" />
+        <attr name="rightImage" format="reference|color" />
+        <attr name="rightImage2" format="reference|color" />
+    </declare-styleable>
+
+
+    <!-- 首页底部TabView -->
+    <declare-styleable name="TabRadioView">
+        <attr name="text" format="reference|string" />
+        <attr name="colorOn" format="reference" />
+        <attr name="colorOff" format="reference" />
+        <attr name="imgOn" format="reference" />
+        <attr name="imgOff" format="reference" />
+    </declare-styleable>
+
+    <!-- CircleImageView -->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+</resources>

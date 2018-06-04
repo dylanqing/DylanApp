@@ -1,0 +1,1 @@
+include ':app', ':baselib', ':pulltorefresh', ':lib_alipay', ':lib_wechatbase', ':lib_wechatpay', ':utilcode', ':lib_zxing'

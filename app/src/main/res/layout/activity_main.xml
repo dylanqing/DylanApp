@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View style="@style/horizontal_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim100"
+        android:background="@color/grey_interval_color"
+        android:orientation="horizontal">
+
+        <com.worldunion.dylanapp.widget.TabRadioView
+            android:id="@+id/main_radio_houses"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/dim30"
+            android:layout_marginRight="@dimen/dim30"
+            android:layout_weight="1"
+            android:padding="@dimen/dim10"
+            tab:colorOff="@color/grey_txt_color"
+            tab:colorOn="@color/main_color"
+            tab:imgOff="@drawable/tab_house_unselect"
+            tab:imgOn="@drawable/tab_house_select"
+            tab:text="@string/tab_houses"/>
+
+        <com.worldunion.dylanapp.widget.TabRadioView
+            android:id="@+id/main_radio_customer"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/dim10"
+            tab:colorOff="@color/grey_txt_color"
+            tab:colorOn="@color/main_color"
+            tab:imgOff="@drawable/tab_customer_unselect"
+            tab:imgOn="@drawable/tab_customer_select"
+            tab:text="@string/tab_customer"/>
+
+
+        <com.worldunion.dylanapp.widget.TabRadioView
+            android:id="@+id/main_radio_my"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/dim30"
+            android:layout_marginRight="@dimen/dim30"
+            android:layout_weight="1"
+            android:padding="@dimen/dim10"
+            tab:colorOff="@color/grey_txt_color"
+            tab:colorOn="@color/main_color"
+            tab:imgOff="@drawable/tab_my_unselect"
+            tab:imgOn="@drawable/tab_my_select"
+            tab:text="@string/tab_my"/>
+    </LinearLayout>
+
+
+</LinearLayout>

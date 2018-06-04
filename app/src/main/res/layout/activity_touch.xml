@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.worldunion.dylanapp.unit.test.ModuleViewGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.worldunion.dylanapp.unit.test.ModuleView
+        android:layout_width="@dimen/dim400"
+        android:layout_height="@dimen/dim400"
+        />
+</com.worldunion.dylanapp.unit.test.ModuleViewGroup>

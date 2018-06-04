@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim100"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dim30"
+            android:scaleType="center"
+            android:src="@drawable/arrow_back"/>
+
+        <TextView
+            style="@style/txt34px"
+            android:layout_centerInParent="true"
+            android:text="二维码扫描"/>
+
+        <TextView
+            android:id="@+id/tvAlbum"
+            style="@style/txt34px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dim30"
+            android:text="从相册"
+            android:textColor="@color/app_main_color"/>
+
+        <TextView
+            android:layout_toLeftOf="@id/tvAlbum"
+            android:id="@+id/tvLight"
+            style="@style/txt34px"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:text="手电筒"
+            android:textColor="@color/app_main_color"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

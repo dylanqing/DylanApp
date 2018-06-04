@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_interval_color3"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_circle_white_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlCommonDialog"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_top_circle_bg"
+            android:clickable="true">
+
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="@string/common_dialog"/>
+
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="@string/my_login"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBlur"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="@string/my_blur"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTimeSelect"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/tvText"
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="@string/my_time_select"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTimeSelect2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/tvTimeText"
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="时间选择器2"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlPulltorefresh"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="下拉刷新"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLoadcontact"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="导入联系人"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlChangeHead"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="修改头像"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLoadcontactActivity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="通讯录读取并且展示"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlVolleyActivity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="VolleyActivity"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOkhttpActivity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="OkhttpActivity"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlQRScanActivity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="二维码扫描Activity"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/rlEditInput"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="@string/my_editinput"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlFlexListView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="@string/my_flex_listview"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlTestService"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="TestService"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlTouchView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_common_grey_bg"
+            android:clickable="true">
+
+            <TextView
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="@string/my_touch_view"/>
+
+            <View
+                style="@style/horizontal_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dim32"
+                android:layout_marginRight="@dimen/dim30"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlCount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim98"
+            android:background="@drawable/selector_bottom_circle_bg"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/tvCount"
+                style="@style/txt28px"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:text="@string/my_count"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

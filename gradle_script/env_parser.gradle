@@ -1,0 +1,130 @@
+
+//该脚本的作用: 用于解析环境变量, 并写入到 project.ext 中.
+//使用 project.ext 中的数据时, 例如, 如下所示:
+//(1) 赋值: ext.BUILD_NUMBER = BUILD_NUMBER;
+//(2) 访问: project.ext.BUILD_NUMBER   <== ok
+//         project.BUILD_NUMBER  <== ok
+//         ext.BUILD_NUMBER <== 需要看体在哪里调用, 这么调用有可能会出错
+//注意, 通过project 来调, 那么需要确认一下这个project是不是lint_config.gradle中的project.
+
+
+//--------------------------------------------------------------------------------------------------
+// (1)以下这些环境变量
+//    1) 写入 project.ext 中
+//    2) 写入 BuildConfig 中
+//--------------------------------------------------------------------------------------------------
+//BUILD_NUMBER(BUILD_NUMBER 是 JENKINS 设置的环境变量, 所以只有当 IS_JENKINS_ENV=true 时, 才能获得到 BUILD_NUMBER)
+ext.BUILD_NUMBER = getIntEnv("BUILD_NUMBER")
+//beta(发灰度时, 我们会设置此为true)
+ext.IS_BETA = getBooleanEnv("BETA", false)
+//needcanary
+ext.IS_NEED_CANARY = getBooleanEnv("IS_NEED_CANARY", true)
+//needgesture
+ext.IS_NEED_GESTURE = getBooleanEnv("IS_NEED_GESTURE", true)
+//isMQC
+ext.IS_MQC = getBooleanEnv("IS_MQC", false)
+//jenkins_env(只有当在jenkins上进行打包时, 我们才会将此环境变量设置为true)
+ext.IS_JENKINS_ENV = getBooleanEnv("IS_JENKINS_ENV", false)
+//is_debug_mode(用于区分该apk是用于测试, 还是用于对外发布给 用户使用. 当且仅当在jenkins上打灰度包和对外发布包时, 我们才设置为false)
+ext.IS_DEBUG_MODE = getBooleanEnv("IS_DEBUG_MODE", true)
+//test_tinker(用于测试tinker功能)
+ext.IS_TEST_TINKER = getBooleanEnv("IS_TEST_TINKER", false)
+//打的包是否是用于加固, 默认是false
+ext.IS_PROTECTED_APP = getBooleanEnv("IS_PROTECTED_APP", false)
+
+
+//打印
+println "----------------------------------------------------------------"
+println "写入 BuildConfig 的环境变量:"
+println "env_parser.gradle: BUILD_NUMBER = " + project.ext.BUILD_NUMBER
+println "env_parser.gradle: IS_BETA = " + project.ext.IS_BETA
+println "env_parser.gradle: IS_NEED_CANARY = " + project.ext.IS_NEED_CANARY
+println "env_parser.gradle: IS_NEED_GESTURE = " + project.ext.IS_NEED_GESTURE
+println "env_parser.gradle: IS_MQC = " + project.ext.IS_MQC
+println "env_parser.gradle: IS_JENKINS_ENV = " + project.ext.IS_JENKINS_ENV
+println "env_parser.gradle: IS_DEBUG_MODE = " + project.ext.IS_DEBUG_MODE
+println "env_parser.gradle: IS_TEST_TINKER = " + project.ext.IS_TEST_TINKER
+println "env_parser.gradle: IS_PROTECTED_APP = " + project.ext.IS_PROTECTED_APP
+println "----------------------------------------------------------------"
+
+
+//写入BuildConfig
+android {
+    defaultConfig {
+        buildConfigField("int", "BUILD_NUMBER", "${project.ext.BUILD_NUMBER}")
+        buildConfigField("boolean", "IS_BETA", "${project.ext.IS_BETA}")
+        buildConfigField("boolean", "IS_NEED_CANARY", "${project.ext.IS_NEED_CANARY}")
+        buildConfigField("boolean", "IS_NEED_GESTURE", "${project.ext.IS_NEED_GESTURE}")
+        buildConfigField("boolean", "IS_MQC", "${project.ext.IS_MQC}")
+        buildConfigField("boolean", "IS_JENKINS_ENV", "${project.ext.IS_JENKINS_ENV}")
+        buildConfigField("boolean", "IS_DEBUG_MODE", "${project.ext.IS_DEBUG_MODE}")
+        buildConfigField("boolean", "IS_TEST_TINKER", "${project.ext.IS_TEST_TINKER}")
+        buildConfigField("boolean", "IS_PROTECTED_APP", "${project.ext.IS_PROTECTED_APP}")
+    }
+}
+
+
+//--------------------------------------------------------------------------------------------------
+// (2)以下这些环境变量
+//    1) 写入 project.ext 中
+//    2) 不写入 BuildConfig 中
+//--------------------------------------------------------------------------------------------------
+//tinker备份文件所在目录名, 比如 "FormaxAPP-1106-17-31-57"
+ext.TINKER_LAST_BAK_APK_DIRECTORY_NAME = getStringEnv("TINKER_LAST_BAK_APK_DIRECTORY_NAME")
+//tinker备份目录何留多少个目录(要执行 buildTinkerPatch任务前, 我们必须设置该环境变量). 如果不设置, 则默认保留10个目录
+ext.TINKER_BAK_NUMBER = getIntEnv("TINKER_BAK_NUMBER", 10)
+//是否将proguard-mapping文件上传到bugly上面(注意, 必须是在 IS_JENKINS_ENV=true时, 才设置 IS_BUGLY_ENABLE_UPLOAD_MAPPING)
+ext.IS_BUGLY_ENABLE_UPLOAD_MAPPING = getBooleanEnv("IS_BUGLY_ENABLE_UPLOAD_MAPPING", false)
+//是否打所有的渠道包(默认当然是不打啦)
+ext.IS_BUILD_ALL_CHANNEL = getBooleanEnv("IS_BUILD_ALL_CHANNEL", false)
+
+//打印
+println "----------------------------------------------------------------"
+println "没有写入 BuildConfig 的环境变量:"
+println "env_parser.gradle: TINKER_LAST_BAK_APK_DIRECTORY_NAME = " + project.ext.TINKER_LAST_BAK_APK_DIRECTORY_NAME
+println "env_parser.gradle: TINKER_BAK_NUMBER = " + project.ext.TINKER_BAK_NUMBER
+println "env_parser.gradle: IS_BUGLY_ENABLE_UPLOAD_MAPPING = " + project.ext.IS_BUGLY_ENABLE_UPLOAD_MAPPING
+println "env_parser.gradle: IS_BUILD_ALL_CHANNEL = " + project.ext.IS_BUILD_ALL_CHANNEL
+println "----------------------------------------------------------------"
+
+
+//--------------------------------------------------------------------------------------------------
+//工具函数
+//--------------------------------------------------------------------------------------------------
+
+static String getStringEnv(String propertyName) {
+    return getStringEnv(propertyName, "")
+}
+
+static String getStringEnv(String propertyName, String defaultValue) {
+    String value = System.getenv(propertyName);
+    if (value == null) {
+        return defaultValue
+    } else {
+        return value
+    }
+}
+
+static boolean getBooleanEnv(String propertyName, boolean defaultValue) {
+    String value = System.getenv(propertyName)
+    if (value == "true") {
+        return true
+    } else if (value == "false") {
+        return false
+    } else {
+        return defaultValue
+    }
+}
+
+static int getIntEnv(String propertyName) {
+    return getIntEnv(propertyName, 0)
+}
+
+static int getIntEnv(String propertyName, int defaultValue) {
+    String value = getStringEnv(propertyName);
+    if (value != null && value.isInteger()) {
+        return value.toInteger()
+    } else {
+        return defaultValue
+    }
+}
